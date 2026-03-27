@@ -392,11 +392,8 @@ function render(statusMap) {
       totalReturned += r.returned;
     });
 
-    const stationNames = area.stations.map(s => s.name).join(' + ');
-
     html += `<div class="area-card">`;
     html += `<div class="area-label">${area.name}</div>`;
-    html += `<div class="area-sublabel">${stationNames}</div>`;
 
     area.stations.forEach(s => {
       const st = statusMap[s.id];
